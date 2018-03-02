@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_f8331-userdebug
-add_lunch_combo aosp_f8332-userdebug
+add_lunch_combo lineage_kagura-userdebug
+

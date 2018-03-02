@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/tone/PlatformConfig.mk
+include device/sony/tone-common/PlatformConfig.mk
+
 
 TARGET_BOOTLOADER_BOARD_NAME := F8331
-
 # Platform
 PRODUCT_PLATFORM := tone
+#BOARD_USES_QCOM_HARDWARE := true
 
 WIFI_BUS := PCIE
 
@@ -27,11 +28,6 @@ NXP_CHIP_FW_TYPE := PN547C2
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=kagura
 
-# Recovery config
-BOARD_SONY_INIT_FLAGS += -DDEV_BLOCK_FOTA_NUM="48"
-BOARD_SONY_INIT_FLAGS += -DDEV_BLOCK_FOTA_MAJOR="259"
-BOARD_SONY_INIT_FLAGS += -DDEV_BLOCK_FOTA_MINOR="16"
-
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
@@ -40,3 +36,4 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 6197084160
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 23857184768
 
 #TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+#TARGET_OTA_ASSERT_DEVICE := kagura,F8331,F8332
