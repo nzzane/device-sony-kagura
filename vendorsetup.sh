@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_kagura-userdebug
-
+add_lunch_combo rr_kagura-userdebug
+add_lunch_combo rr_kagura-eng
